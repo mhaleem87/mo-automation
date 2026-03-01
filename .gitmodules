@@ -1,0 +1,9 @@
+[submodule "macbook-controller"]
+	path = macbook-controller
+	url = git@github.com:mhaleem87/macbook-controller.git
+[submodule "python-job-agent"]
+	path = python-job-agent
+	url = git@github.com:mhaleem87/python-job-agent.git
+[submodule "openclaw"]
+	path = openclaw
+	url = git@github.com:mhaleem87/openclaw.git
