@@ -9,6 +9,7 @@ This is a monorepo containing three independent AI automation projects, all Pyth
 - **macbook-controller/** — Telegram bot for remote MacBook control via Claude AI
 - **python-job-agent/** — End-to-end job search pipeline (search → AI tailoring → PDF generation → Google Sheets)
 - **openclaw/** — Modular multi-agent architecture for the same job functions using Git submodules
+- **job-tracker-utility/** — Lightweight CLI for tracking job applications locally (no external dependencies)
 
 ## Running Projects
 
@@ -71,6 +72,9 @@ The same pipeline is accessible via three interfaces: CLI (`main.py`), web dashb
 
 ### openclaw
 Modular rewrite of python-job-agent as independent Git submodule agents (job-fetcher, resume-updater, keyword-analyzer, ats-scorer, cover-letter-generator, sheets-manager). The `main-orchestrator/` is a work-in-progress placeholder.
+
+### job-tracker-utility
+Single-file CLI app (`src/main.py`). Stores applications as JSON in `data/applications.json`. Supports add, list, update status, delete, search, and CSV export. No external dependencies — stdlib only.
 
 ## Key Configuration
 
