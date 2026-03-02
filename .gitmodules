@@ -7,3 +7,6 @@
 [submodule "openclaw"]
 	path = openclaw
 	url = git@github.com:mhaleem87/openclaw.git
+[submodule "job-tracker-utility"]
+	path = job-tracker-utility
+	url = git@github.com:mhaleem87/job-tracker-utility.git
