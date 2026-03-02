@@ -14,6 +14,9 @@ End-to-end job search automation pipeline. Searches multiple job boards, tailors
 
 **Interfaces:** CLI, Streamlit web dashboard, Telegram bot.
 
+### [job-tracker-utility](https://github.com/mhaleem87/job-tracker-utility)
+Lightweight CLI for tracking job applications locally. Add, list, update status, delete, search, and export to CSV — no dependencies beyond Python 3.
+
 ### [openclaw](https://github.com/mhaleem87/openclaw)
 Modular rewrite of python-job-agent as independent microservice agents (job-fetcher, resume-updater, keyword-analyzer, ats-scorer, cover-letter-generator, sheets-manager). Work in progress.
 
