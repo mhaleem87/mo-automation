@@ -1,0 +1,127 @@
+═══════════════════════════════════════════════════════════════
+🤖 CLAUDE CODE MEMORY - DOCUMENTATION MAINTENANCE
+═══════════════════════════════════════════════════════════════
+
+CRITICAL INSTRUCTION:
+Whenever you create new components, UPDATE THIS DOCUMENTATION!
+
+═══════════════════════════════════════════════════════════════
+
+DOCUMENTATION LOCATION:
+📍 ~/Projects/mo-automation/OPENCLAW_DOCUMENTATION.md
+
+UPDATE LOG LOCATION:
+📍 ~/Projects/mo-automation/DOCUMENTATION_UPDATES.log
+
+CHECKLIST LOCATION:
+📍 ~/Projects/mo-automation/DOC_UPDATE_CHECKLIST.md
+
+═══════════════════════════════════════════════════════════════
+
+WHEN TO UPDATE DOCUMENTATION:
+✅ New project created
+✅ New agent built
+✅ New Telegram bot deployed
+✅ New integration added
+✅ Existing component modified
+✅ Workflow changed
+✅ Bug fixes applied
+✅ Enhancement completed
+✅ Test completed
+✅ Deployment changes
+
+═══════════════════════════════════════════════════════════════
+
+QUICK UPDATE PROCEDURE:
+
+1. Edit main documentation:
+   nano ~/Projects/mo-automation/OPENCLAW_DOCUMENTATION.md
+
+2. Add entry to update log:
+   nano ~/Projects/mo-automation/DOCUMENTATION_UPDATES.log
+
+3. Version bump if needed:
+   - V1.0 → V1.1 (minor changes)
+   - V1.1 → V2.0 (major changes)
+
+4. Git commit & push:
+   cd ~/Projects/mo-automation
+   git add OPENCLAW_DOCUMENTATION.md DOCUMENTATION_UPDATES.log
+   git commit -m "docs: [TYPE] - [DESCRIPTION]"
+   git push origin main
+
+═══════════════════════════════════════════════════════════════
+
+GIT COMMIT MESSAGE FORMAT:
+
+git commit -m "docs: [TYPE] - [DESCRIPTION]"
+
+Types:
+- add      = New component/agent/bot
+- update   = Modified existing component
+- fix      = Bug fix in documentation
+- integration = New integration added
+- enhancement = New feature/capability
+
+Examples:
+- docs: add - New resume-screening-agent
+- docs: update - Modify job search pipeline
+- docs: fix - Correct API endpoint URL
+- docs: integration - Add Slack webhook
+- docs: enhancement - Add NLP support to bot
+
+═══════════════════════════════════════════════════════════════
+
+KEY SECTIONS TO UPDATE:
+
+1. PROJECT ECOSYSTEM (new projects)
+2. CORE AGENTS & COMPONENTS (new agents)
+3. TELEGRAM BOTS (new bots)
+4. INTEGRATION POINTS (new integrations)
+5. CONFIGURATION & CREDENTIALS (new creds)
+6. HOW TO START (new start commands)
+7. WORKFLOWS & PROCESSES (workflow changes)
+8. QUICK REFERENCE (command/location updates)
+
+═══════════════════════════════════════════════════════════════
+
+DETAILED CHECKLIST:
+
+Use DOC_UPDATE_CHECKLIST.md for:
+- Step-by-step update procedure
+- Which sections to update by change type
+- File format guidelines
+- Common mistakes to avoid
+- Pre-commit verification
+
+═══════════════════════════════════════════════════════════════
+
+IMPORTANT REMINDERS:
+
+✓ Always test commands before documenting
+✓ Include file paths and locations
+✓ Add examples for how to start
+✓ Update related sections (not just one)
+✓ Follow existing formatting/style
+✓ Don't forget to push to GitHub
+✓ Increment version numbers
+✓ Update both doc AND log files
+
+═══════════════════════════════════════════════════════════════
+
+COMMON ERRORS TO AVOID:
+
+❌ Documenting without testing
+❌ Forgetting version bump
+❌ Wrong commit message format
+❌ Updating doc but not log
+❌ Not pushing to GitHub
+❌ Incomplete information
+❌ Inconsistent formatting
+
+═══════════════════════════════════════════════════════════════
+
+Remember: Good documentation = Good team coordination!
+Keep it updated, keep it clear, keep it tested.
+
+═══════════════════════════════════════════════════════════════
