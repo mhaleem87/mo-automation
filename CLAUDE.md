@@ -51,7 +51,7 @@ Monorepo containing AI automation projects, all Python-based with no Node.js com
 - **python-job-agent/** — End-to-end job search pipeline (search → AI tailoring → PDF generation → Google Sheets)
 - **macbook-controller/** — Telegram bot for remote MacBook control via Claude AI
 - **job-tracker-utility/** — Lightweight CLI for tracking job applications locally (no external dependencies)
-- **skills/** — Custom skill files for agent specialization (Haiku-created, UNVERIFIED)
+- **skills/** — Empty (March 8, 2026). All 20 Haiku-created skills deleted as generic filler. Rebuild with Opus when needed.
 
 ## Key Paths
 
