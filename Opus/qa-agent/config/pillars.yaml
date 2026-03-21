@@ -1,0 +1,90 @@
+app_name: Pillars
+app_url: https://pillars-six.vercel.app
+categories:
+  routes:
+    - path: /auth
+      expect_status: 200
+    - path: /home
+      expect_status: 200
+    - path: /quran
+      expect_status: 200
+    - path: /quran/1
+      expect_status: 200
+    - path: /prayer
+      expect_status: 200
+    - path: /dhikr
+      expect_status: 200
+    - path: /hifz
+      expect_status: 200
+    - path: /tajweed
+      expect_status: 200
+    - path: /ramadan
+      expect_status: 200
+    - path: /community
+      expect_status: 200
+    - path: /settings
+      expect_status: 200
+    - path: /more
+      expect_status: 200
+    - path: /bookmarks
+      expect_status: 200
+
+  quran_api:
+    base_url: https://api.quran.com/api/v4
+    tests:
+      - name: "Al-Fatiha has 7 verses"
+        endpoint: /chapters/1
+        check: verses_count == 7
+      - name: "Al-Baqarah has 286 verses"
+        endpoint: /chapters/2
+        check: verses_count == 286
+      - name: "114 total surahs"
+        endpoint: /chapters
+        check: length == 114
+      - name: "Translation available for Al-Fatiha"
+        endpoint: /verses/by_chapter/1?translations=20&fields=text_uthmani
+        check: translations exists and not empty
+
+  audio:
+    reciters:
+      - id: ar.alafasy
+        name: Mishary Alafasy
+      - id: ar.abdurrahmaansudais
+        name: Abdul Rahman Al-Sudais
+      - id: ar.husary
+        name: Al-Hussary
+    test_ayahs: [1, 7, 8, 255, 6236]
+    url_pattern: "https://cdn.islamic.network/quran/audio/64/{reciter}/{ayah}.mp3"
+
+  apis:
+    - name: "Tafsir API responds"
+      method: POST
+      url: https://pillars-six.vercel.app/api/tafsir
+      body: {"surah": 1, "ayah": 1, "arabic_text": "test", "translation": "test"}
+      expect_status: 200
+    - name: "Coach API responds"
+      method: POST
+      url: https://pillars-six.vercel.app/api/coach
+      body: {"surah": 1, "ayah": 1, "arabic_text": "test", "translation": "test"}
+      expect_status: 200
+    - name: "Prayer times API"
+      url: https://api.aladhan.com/v1/timingsByCity?city=New+York&country=US&method=2
+      expect_status: 200
+
+  ai_content_review:
+    enabled: true
+    anthropic_api_key_env: ANTHROPIC_API_KEY
+    tests:
+      - name: "Al-Fatiha Tafsir accuracy"
+        type: tafsir_review
+        surah: 1
+        ayah: 1
+      - name: "Ayat al-Kursi Tafsir accuracy"
+        type: tafsir_review
+        surah: 2
+        ayah: 255
+      - name: "Dhikr transliterations"
+        type: content_review
+        content: ["Subhanallah", "Alhamdulillah", "Allahu Akbar", "La ilaha illallah", "Astaghfirullah"]
+      - name: "Ramadan duas review"
+        type: duas_review

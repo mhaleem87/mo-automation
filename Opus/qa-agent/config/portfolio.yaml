@@ -1,0 +1,26 @@
+app_name: Portfolio
+app_url: https://mohammedhaleem.com
+categories:
+  routes:
+    - path: /
+      expect_status: 200
+    - path: /experience
+      expect_status: 200
+    - path: /projects
+      expect_status: 200
+    - path: /signin
+      expect_status: 200
+    - path: /dashboard
+      expect_status: 200
+  apis:
+    - name: "Agents API"
+      url: https://mohammedhaleem.com/api/agents
+      expect_status: 200
+    - name: "Jobs API"
+      url: https://mohammedhaleem.com/api/jobs
+      expect_status: 200
+    - name: "Chat API"
+      method: POST
+      url: https://mohammedhaleem.com/api/chat
+      body: {"messages": [{"role": "user", "content": "hi"}]}
+      expect_status: 200
